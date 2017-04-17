@@ -5,7 +5,8 @@
   "scripts": {
     "db:reset": "knex migrate:rollback && knex migrate:latest && knex seed:run",
     "start": "nodemon bin/tv_faves",
-    "test": "mocha --recursive --watch"
+    "test": "mocha --recursive --watch",
+    "lint": "standard --verbose | snazzy || true"
   },
   "engines": { 
     "node": "7.3.0"

@@ -1,5 +1,5 @@
 
-exports.seed = function(knex, Promise) {
+exports.seed = function (knex, Promise) {
   return knex('favorites').del() // Deletes ALL existing entries
     .then(function () { // Inserts seed entries one by one in series
       return Promise.all([
@@ -17,17 +17,16 @@ exports.seed = function(knex, Promise) {
         }),
         knex('favorites').insert({
           show_id: 6
-        }), 
+        }),
         knex('favorites').insert({
           show_id: 7
-        }), 
+        }),
         knex('favorites').insert({
           show_id: 3
-        }), 
+        }),
         knex('favorites').insert({
           show_id: 2
-        }) 
-      ]);
-    });
-};
-
+        })
+      ])
+    })
+}

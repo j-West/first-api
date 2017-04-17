@@ -2,10 +2,10 @@
 // $ knex seed:make shows_seed --env development.
 // knex knows to put it in the db folder (?)
 
-// Then seeded the db with 
+// Then seeded the db with
 // $ knex seed:run --env development
 
-exports.seed = function(knex, Promise) {
+exports.seed = function (knex, Promise) {
   return knex('shows').del() // Deletes ALL existing entries
     .then(function () { // Inserts seed entries one by one in series
       return Promise.all([
@@ -39,25 +39,25 @@ exports.seed = function(knex, Promise) {
           channel: 'AMC',
           genre: 'dramedy',
           inProduction: true
-        }), 
+        }),
         knex('shows').insert({
           name: 'Cheers',
           channel: 'NBC',
           genre: 'comedy',
           inProduction: false
-        }), 
+        }),
         knex('shows').insert({
           name: 'Bob\'s Burgers',
           channel: 'Fox',
           genre: 'animation',
           inProduction: true
-        }), 
+        }),
         knex('shows').insert({
           name: 'Stranger Things',
           channel: 'Netflix',
           genre: 'drama',
           inProduction: true
-        }) 
-      ]);
-    });
-};
+        })
+      ])
+    })
+}
