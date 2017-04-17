@@ -14,49 +14,49 @@ exports.seed = function (knex, Promise) {
           name: 'Mr. Robot',
           channel: 'USA Network',
           genre: 'drama',
-          inProduction: true
+          in_production: true
         }),
         knex('shows').insert({
           name: 'The IT Crowd',
           channel: 'Netflix',
           genre: 'comedy',
-          inProduction: false
+          in_production: false
         }),
         knex('shows').insert({
           name: 'Game of Thrones',
           channel: 'HBO',
           genre: 'drama',
-          inProduction: true
+          in_production: true
         }),
         knex('shows').insert({
           name: 'Mad Men',
           channel: 'AMC',
           genre: 'drama',
-          inProduction: false
+          in_production: false
         }),
         knex('shows').insert({
           name: 'Better Call Saul',
           channel: 'AMC',
           genre: 'dramedy',
-          inProduction: true
+          in_production: true
         }),
         knex('shows').insert({
           name: 'Cheers',
           channel: 'NBC',
           genre: 'comedy',
-          inProduction: false
+          in_production: false
         }),
         knex('shows').insert({
           name: 'Bob\'s Burgers',
           channel: 'Fox',
           genre: 'animation',
-          inProduction: true
+          in_production: true
         }),
         knex('shows').insert({
           name: 'Stranger Things',
           channel: 'Netflix',
           genre: 'drama',
-          inProduction: true
+          in_production: true
         })
       ])
     })
