@@ -1,12 +1,20 @@
 {
+<<<<<<< HEAD
   "name": "tv-faves-api-v1",
+=======
+  "name": "tv-faves-api-joeshep",
+>>>>>>> f617d1d66f5778f98b2686d4787192da376bc658
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "db:reset": "knex migrate:rollback && knex migrate:latest && knex seed:run",
     "start": "nodemon bin/tv_faves",
+<<<<<<< HEAD
     "test": "mocha --recursive --watch",
     "lint": "standard --verbose | snazzy || true"
+=======
+    "test": "nodemon --exec \"mocha --recursive\" -R list"
+>>>>>>> f617d1d66f5778f98b2686d4787192da376bc658
   },
   "engines": { 
     "node": "7.3.0"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -38,3 +39,7 @@ jspm_packages
 
 lib
 .idea
+=======
+node_modules
+.env
+>>>>>>> f617d1d66f5778f98b2686d4787192da376bc658

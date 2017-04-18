@@ -8,7 +8,11 @@ module.exports = {
 
   test: {
     client: 'pg',
+<<<<<<< HEAD
     connection: 'postgres://localhost/tv_faves_test',
+=======
+    connection: 'postgres://localhost/tv_faves_test17',
+>>>>>>> f617d1d66f5778f98b2686d4787192da376bc658
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -19,7 +23,11 @@ module.exports = {
   development: {
     client: 'pg',
     debug: true,
+<<<<<<< HEAD
     connection: 'postgres://localhost/tv_faves',
+=======
+    connection: 'postgres://localhost/tv_faves17',
+>>>>>>> f617d1d66f5778f98b2686d4787192da376bc658
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -37,4 +45,8 @@ module.exports = {
       directory: __dirname + '/db/seeds/production'
     }
   }
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> f617d1d66f5778f98b2686d4787192da376bc658
