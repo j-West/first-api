@@ -7,7 +7,7 @@ const { getShows, getShow, getShowFaves, addShow, deleteShow } = require('../con
 
 router.get('/shows', getShows)
 router.post('/shows/new', addShow)
-router.delete('/shows/delete/:id', deleteShow)
+router.delete('/shows/:id', deleteShow)
 router.get('/shows/favorites', getShowFaves)
 router.get('/shows/:id', getShow)
 

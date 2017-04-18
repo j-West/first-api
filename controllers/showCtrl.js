@@ -32,12 +32,14 @@ module.exports.addShow = ({body}, res, next) => {
     })
 }
 
-module.exports.deleteShow = ({query: {showId}}, res, next) => {
-  Show.destroy({id: showId})
-    .then(() => res.status(201).json({"msg":"Nice DELETE, Brohemouth"}))
+module.exports.deleteShow = ({params: {id}}, res, next) => {
+  Show.forge({id})
+    .destroy()
+    .then(show => res.status(202).json(show))
     .catch(error => {
       next(error)
     })
+  
 }
 
 module.exports.getShowFaves = ({query: {showId}}, res, next) => {

@@ -63,17 +63,28 @@ describe('Shows routes', () => {
       .then(res => {
         res.should.have.status(201)
         res.should.be.json
-        res.should.be.a.apply('object')
+        res.should.be.a('object')
       })
     })
   })
-  describe('DELETE /api/v1/shows/delete', () => {
+
+  describe('DELETE /api/v1/shows/:id', () => {
     it('should delete a show obj from the db', () => {
       return chai.request(server)
-      .delete('/api/v1/shows/delete/8')
-      .then(() => {
-        res.should.have.status(201)
+      .delete('/api/v1/shows/1')
+      .then(res => {
+        res.should.have.status(202)
         res.should.be.json
+        res.should.be.a('object')
+
+        chai.request(server)
+        .get('/api/v1/shows')
+        .then(res => {
+          res.should.have.status(200)
+          res.should.be.json
+          res.body.should.be.a('array')
+          res.body.length.should.equal(4)
+        })
       })
     })
   })
