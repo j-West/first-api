@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const { bookshelf } = require('../db/database');
-require('./show');
+const { bookshelf } = require('../db/database')
+require('./show')
 
 const Favorite = bookshelf.Model.extend({
   tableName: 'favorites',
@@ -15,8 +15,8 @@ const Favorite = bookshelf.Model.extend({
     })
     .catch( (error) => {
       return error
-    });
+    })
   }
-});
+})
 
-module.exports = bookshelf.model('Favorite', Favorite);
+module.exports = bookshelf.model('Favorite', Favorite)

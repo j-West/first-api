@@ -27,7 +27,7 @@ exports.seed = function(knex, Promise) {
         knex('favorites').insert({
           show_id: 2
         }) 
-      ]);
-    });
-};
+      ])
+    })
+}
 

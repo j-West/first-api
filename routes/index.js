@@ -1,12 +1,14 @@
-'use strict';
+'use strict'
 
-const { Router } = require('express');
-const router = Router();
+const { Router } = require('express')
+const router = Router()
 
-const { getShows, getShow, getShowFaves } = require('../controllers/showCtrl');
+const { getShows, getShow, getShowFaves, addShow, deleteShow } = require('../controllers/showCtrl')
 
-router.get('/shows', getShows);
-router.get('/shows/favorites', getShowFaves);
-router.get('/shows/:id', getShow);
+router.get('/shows', getShows)
+router.post('/shows/new', addShow)
+router.delete('/shows/delete/:id', deleteShow)
+router.get('/shows/favorites', getShowFaves)
+router.get('/shows/:id', getShow)
 
-module.exports = router;
+module.exports = router

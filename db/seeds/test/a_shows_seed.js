@@ -58,6 +58,6 @@ exports.seed = function(knex, Promise) {
           genre: 'drama',
           inProduction: true
         }) 
-      ]);
-    });
-};
+      ])
+    })
+}

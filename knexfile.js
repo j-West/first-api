@@ -8,7 +8,7 @@ module.exports = {
 
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/tv_faves_test17',
+    connection: 'postgres://localhost/tv_faves_test',
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -19,7 +19,7 @@ module.exports = {
   development: {
     client: 'pg',
     debug: true,
-    connection: 'postgres://localhost/tv_faves17',
+    connection: 'postgres://localhost/tv_faves',
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -37,4 +37,4 @@ module.exports = {
       directory: __dirname + '/db/seeds/production'
     }
   }
-};
+}
