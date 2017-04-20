@@ -6,50 +6,50 @@ exports.seed = function(knex, Promise) {
         knex('directors').insert({
           name: 'Jimmy Pesto',
           gender: 'male',
-          birthYear: 1947,
-          twitterHandle: '@JamesPestoDirex'
+          birth_year: 1947,
+          twitter_handle: '@JamesPestoDirex'
         }),
         knex('directors').insert({
           name: 'Linda LaVida',
           gender: 'female',
-          birthYear: 1978,
-          twitterHandle: '@LaVida_loca'
+          birth_year: 1978,
+          twitter_handle: '@LaVida_loca'
         }),
         knex('directors').insert({
           name: 'Star Sneetch',
           gender: 'binary',
-          birthYear: 1993,
-          twitterHandle: '@sneetchbelly'
+          birth_year: 1993,
+          twitter_handle: '@sneetchbelly'
         }),
         knex('directors').insert({
           name: 'David Duchovny',
           gender: 'male',
-          birthYear: 1962,
-          twitterHandle: '@iwanttodirect'
+          birth_year: 1962,
+          twitter_handle: '@iwanttodirect'
         }),
         knex('directors').insert({
           name: 'Maggie Simpson',
           gender: 'female',
-          birthYear: 1988,
-          twitterHandle: '@permababy88'
+          birth_year: 1988,
+          twitter_handle: '@permababy88'
         }), 
         knex('directors').insert({
           name: 'Gort McGoo',
           gender: 'male',
-          birthYear: 1939,
-          twitterHandle: '@tooldfortwitter'
+          birth_year: 1939,
+          twitter_handle: '@tooldfortwitter'
         }), 
         knex('directors').insert({
           name: 'Garth Hairpin',
           gender: 'male',
-          birthYear: 1974,
-          twitterHandle: '@actiongarth'
+          birth_year: 1974,
+          twitter_handle: '@actiongarth'
         }), 
         knex('directors').insert({
           name: 'Della Ware',
           gender: 'female',
-          birthYear: 1980,
-          twitterHandle: '@dellacallstheshots'
+          birth_year: 1980,
+          twitter_handle: '@dellacallstheshots'
         }) 
       ]);
     });

@@ -43,10 +43,9 @@ module.exports.deleteShow = ({params: {id}}, res, next) => {
 }
 
 module.exports.getShowFaves = ({query: {showId}}, res, next) => {
-  console.log("The query string", showId)
   Show.forge({id: showId})
   .fetch({withRelated: ['upvotes'], require: true})
-  .then( (faves) => {
+  .then( faves => {
     res.status(200).json(faves)
   })
   .catch( (err) => {
@@ -54,11 +53,13 @@ module.exports.getShowFaves = ({query: {showId}}, res, next) => {
   })
 }
 
-module.exports.getShowDirectors = (({query: {showId}}, res, next) => {
+module.exports.getShowDirectors = ({query: {showId}}, res, next) => {
   Show.forge({id: showId})
   .fetch({withRelated: ['showDirectors'], require: true})
-  .then(show => res.status(200).json(show))
+  .then(show => {
+    res.status(200).json(show)
+  })
   .catch(error => {
     next(error)
   })
-})
+}
