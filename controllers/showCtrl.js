@@ -2,9 +2,20 @@
 
 const { bookshelf } = require('../db/database')
 const Show = require('../models/show')
+const Director = require('../models/director')
 
 module.exports.getShows = (req, res, next) => {
   Show.getAll()
+  .then( (shows) => {
+    res.status(200).json(shows)
+  })
+  .catch( (error) => {
+    next(error)
+  })
+}
+
+module.exports.getDirectors = (req, res, next) => {
+  Director.getAll()
   .then( (shows) => {
     res.status(200).json(shows)
   })
@@ -58,6 +69,17 @@ module.exports.getShowDirectors = ({query: {showId}}, res, next) => {
   .fetch({withRelated: ['showDirectors'], require: true})
   .then(show => {
     res.status(200).json(show)
+  })
+  .catch(error => {
+    next(error)
+  })
+}
+
+module.exports.getDirectorShows = ({query: {directorId}}, res, next) => {
+  Director.forge({id: directorId})
+  .fetch({withRelated: ['shows'], require: true})
+  .then(director => {
+    res.status(200).json(director)
   })
   .catch(error => {
     next(error)
