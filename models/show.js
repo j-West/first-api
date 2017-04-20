@@ -2,7 +2,7 @@
 
 const { bookshelf } = require('../db/database')
 require('./favorite')
-require('./show_directos')
+require('./show_director')
 
 const Show = bookshelf.Model.extend({ 
   tableName: 'shows',
