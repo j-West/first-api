@@ -21,7 +21,7 @@ exports.up = (knex, Promise) => {
   })
   createTable('shows_directors', (table) => {
     table.increments()
-    table.integer('directo_id').unsigned().references('directors.id')
+    table.integer('director_id').unsigned().references('directors.id')
     table.integer('show_id').unsigned().references('shows.id')
   })
 }
