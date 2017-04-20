@@ -53,3 +53,12 @@ module.exports.getShowFaves = ({query: {showId}}, res, next) => {
     next(err)
   })
 }
+
+module.exports.getShowDirectors = (({query: {showId}}, res, next) => {
+  Show.forge({id: showId})
+  .fetch({withRelated: ['showDirectors'], require: true})
+  .then(show => res.status(200).json(show))
+  .catch(error => {
+    next(error)
+  })
+})
